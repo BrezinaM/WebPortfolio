@@ -1,0 +1,632 @@
+body {
+    width: 100%;
+    height: 100vh;
+    background-color: #000;
+    font-family: 'Exo 2', sans-serif;
+    color: #dadada;
+    
+}
+
+/* Background */
+
+canvas {
+    position:absolute;
+    width: 100%;
+    height: 100vh;
+    z-index: 1;
+}
+hr{
+    margin: 0 .3%;
+    padding: 0;
+    color: #dadada;
+    opacity: .6;
+}
+/* Background trail */
+
+/* a {
+    position: absolute;
+    bottom: 2vmin;
+    right: 2vmin;
+    color: rgba(255,255,255,0.2);
+    text-decoration: none;
+}
+
+a:hover {
+    color: #fff;
+} */
+
+/* Landing section */
+
+section.onboard{
+    min-height: 100vh;
+    position: relative;
+    background-color: #000;
+    /* background-image: radial-gradient(circle at top right, rgba(121, 68, 154, 0.20), transparent),
+        radial-gradient(circle at 20% 80%, rgba(41, 196, 255, 0.15), transparent);
+    background-attachment: fixed; */
+}
+section.onboard .resp-button{
+    position: absolute;
+    top: 2rem;
+    left: 8%;
+    display: none;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 36px;
+    height: 30px;
+}
+section.onboard .resp-button .bar{
+    height: 2px;
+    width: 100%;
+    background-color: #dadada;
+    border-radius: 2px;
+}
+section.onboard .tab-panel{
+    display: flex;
+    box-sizing: border-box;
+    justify-content: center;
+    align-items: center;
+    padding: 16px 10%;
+    font-size: 22px;
+    font-weight: 200;
+}
+section.onboard .tab-panel > *{
+    z-index: 10;
+}
+section.onboard .nav-links{
+    list-style: none;
+    align-items: center;
+    padding: 0;
+}
+section.onboard .tab-panel ul{
+    display: flex;
+    margin: 0;
+    padding: 0;
+}
+section.onboard .nav-links li {
+    margin: 0 20px;
+    cursor: pointer;
+    position: relative;
+    text-decoration: none;
+}
+section.onboard .nav-links li a::before{
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 1px;
+    background-color: #dadada;
+    
+    bottom: 0;
+    left: 0;
+    transform-origin: right;
+    transform: scaleX(0);
+    transition: transform .3s ease-in-out;
+}
+section.onboard .nav-links li a:hover::before{
+    transform-origin: left;
+    transform: scaleX(1);
+}
+section.onboard .nav-links a{
+    text-decoration: none;
+    color: #dadada !important;
+}
+section.onboard .heading{
+    position: absolute;
+    bottom: 5%;
+    right: 12%;
+}
+section.onboard .title{
+    font-weight: 200;
+    width: 500px;
+}
+section.onboard .name{
+    text-align: right;
+    font-size: 48px;
+}
+section.onboard .subtitle{
+    text-align: right;
+    font-size: 20px;
+}
+
+/* Section Body */
+
+section.body{
+    background-image: linear-gradient(rgba(0, 0, 0, 0.8),
+                       rgba(0, 0, 0, 0.8)), url(/assets/png/spaceBg04.webp);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    position: relative;
+    padding: 10% 0;
+}
+
+/* Section Body-AboutMe */
+section.about-me{
+    padding: 5% 15% 15% 15%;
+}
+section.about-me p{
+    font-weight: 100;
+}
+section.about-me h1{
+    padding-left: 40px;
+}
+section.about-me .about-me-divider{
+    padding: 15%;
+}
+section.about-me .about-me-card{
+    padding: 30px;
+    position: relative;
+    color: #fff;
+    background-image: radial-gradient(circle at top right, rgba(60, 60, 60, 0.20), transparent),
+        radial-gradient(circle at bottom left, rgba(255, 255, 255, 0.12), transparent);
+    border-radius: 0px 20px 0px 20px;
+    margin-bottom: 65px;
+}
+section.about-me .border-right, .border-left{
+    position: absolute;
+    border-radius: 3px;
+    width: 40%;
+    height: 50%;
+}
+section.about-me .about-me-card .border-right{
+    bottom: 0;
+    right: 0;
+    border-right: 1px solid white;
+    border-bottom: 1px solid white;
+}
+section.about-me .about-me-card .border-left{
+    top: 0;
+    left: 0;
+    border-top: 1px solid white;
+    border-left: 1px solid white;
+}
+section.about-me .about-me-card .border-line{
+    position: absolute;
+    height: 60%;
+    width: 180px;
+    top: 0;
+    right: 0;
+    margin-right: -179px;
+    border-bottom: 1px solid #dadada;
+}
+section.about-me .about-me-card .border-dot{
+    position: absolute;
+    height: 14px;
+    width: 14px;
+    bottom: 0;
+    right: 0;
+    background-color: #dadada;
+    border-radius: 50%;
+    margin-right: -7px;
+    margin-bottom: -7px;
+}
+
+section.about-me .goals-card{
+    background-image: radial-gradient(circle at bottom left, rgba(60, 60, 60, 0.20), transparent),
+        radial-gradient(circle at top right, rgba(255, 255, 255, 0.12), transparent);
+    padding: 30px;
+    position: relative;
+    color: #fff;
+    border-radius: 0px 20px 0px 20px;
+}
+section.about-me .goals-card .border-right{
+    bottom: 0;
+    right: 0;
+    width: 50%;
+    border-right: 1px solid white;
+    border-bottom: 1px solid white;
+}
+section.about-me .goals-card .border-left{
+    top: 0;
+    left: 0;
+    border-top: 1px solid white;
+    border-left: 1px solid white;
+}
+section.about-me .goals-card .border-line{
+    position: absolute;
+    height: 140px;
+    width: 40%;
+    bottom: 0;
+    right: 0;
+    margin-bottom: -139px;
+    border-left: 1px solid #dadada;
+}
+section.about-me .goals-card .border-dot{
+    position: absolute;
+    height: 14px;
+    width: 14px;
+    bottom: 0;
+    left: 0;
+    background-color: #dadada;
+    border-radius: 50%;
+    margin-left: -7px;
+    margin-bottom: -7px;
+}
+section.about-me .hobbies-card{
+    background-image: radial-gradient(circle at top left, rgba(60, 60, 60, 0.20), transparent),
+        radial-gradient(circle at bottom right, rgba(255, 255, 255, 0.12), transparent);
+    padding: 30px;
+    position: relative;
+    color: #fff;
+    border-radius: 20px 0px 20px 0px;
+    margin-top: -40px;
+}
+section.about-me .hobbies-card .border-left{
+    bottom: 0;
+    left: 0;
+    border-left: 1px solid white;
+    border-bottom: 1px solid white;
+}
+section.about-me .hobbies-card .border-right{
+    top: 0;
+    right: 0;
+    border-top: 1px solid white;
+    border-right: 1px solid white;
+}
+section.about-me .hobbies-card .border-line{
+    position: absolute;
+    height: 60%;
+    width: 90px;
+    top: 0;
+    left: 0;
+    margin-left: -89px;
+    border-bottom: 1px solid #dadada;
+}
+section.about-me .hobbies-card .border-dot{
+    position: absolute;
+    height: 14px;
+    width: 14px;
+    bottom: 0;
+    left: 0;
+    background-color: #dadada;
+    border-radius: 50%;
+    margin-left: -7px;
+    margin-bottom: -7px;
+}
+section.about-me .neptune-image{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100px;
+    margin-top: 10px;
+}
+
+section.about-me .uranus-image{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100px;
+    margin-top: -40px;
+    margin-left: -40px;
+}
+
+section.about-me .robot-image{
+    position: absolute;
+    top: 0;
+    height: 70px;
+    margin-top: -68px;
+    margin-left: 50%;
+    display: none;
+}
+section.about-me .solar-system-image{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 140px;
+    margin-left: 12px;
+    margin-top: -32px;
+}
+
+/* Section Body-Skills */
+
+section.skills{
+    background-color: #000;
+    padding: 5% 15%;
+    text-align: center;
+}
+section.skills p{
+    margin: 0;
+}
+section.skills .row{
+    position: relative;
+}
+section.skills img{
+    height: 160px;
+}
+section.skills .skills-tab-1 p{
+    font-weight: 100;
+}
+section.skills .skills-tab-1 div{
+    height: 80%;
+}
+section.skills .skills-tab-2{
+    margin-left: 100px;
+}
+section.skills .skills-tab-2 .certif-link{
+    background-image: radial-gradient(circle at bottom left, rgba(60, 60, 60, 0.20), transparent),
+        radial-gradient(circle at top right, rgba(255, 255, 255, 0.12), transparent);
+    padding: 12px 16px;
+    margin: 12px 0;
+    display: inline-block;
+    margin-top: 50px;
+    position: relative;
+    color: #fff;
+    border-radius: 0px 10px 0px 10px;
+    font-size: 17px;
+}
+section.skills .border-right, section.skills .border-left{
+    position: absolute;
+    border-radius: 3px;
+    width: 50%;
+    height: 35%;
+}
+section.skills .skills-tab-2 .border-right{
+    bottom: 0;
+    right: 0;
+    border-right: 1px solid white;
+    border-bottom: 1px solid white;
+}
+section.skills .skills-tab-2 .border-left{
+    top: 0;
+    left: 0;
+    border-top: 1px solid white;
+    border-left: 1px solid white;
+}
+section.skills .skills-tab-2 .border-line{
+    position: absolute;
+    height: 40px;
+    width: 50%;
+    top: 0;
+    left: 0;
+    margin-top: -39px;
+    border-right: 1px solid #dadada;
+}
+section.skills .skills-tab-2 .border-dot{
+    position: absolute;
+    height: 10px;
+    width: 10px;
+    top: 0;
+    right: 0;
+    background-color: #dadada;
+    border-radius: 50%;
+    margin-right: -5px;
+    margin-bottom: -5px;
+}
+section.skills .skills-tab-2 a::before{
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 1px;
+    background-color: #dadada;
+    bottom: 0;
+    left: 0;
+    transform-origin: right;
+    transform: scaleX(0);
+    transition: transform .3s ease-in-out;
+}
+section.skills .skills-tab-2 a:hover::before{
+    transform-origin: left;
+    transform: scaleX(1);
+}
+section.skills .skills-tab-2 a{
+    text-decoration: none;
+    color: #dadada !important;
+}
+section.skills .skills-tab-2 p{
+    position: relative;
+}
+
+/* Section Body-Contact */
+section.contact{
+    padding: 5% 15% 5% 15%;
+    margin-top: 10%;
+    text-align: center;
+}
+section.contact > * {
+    -webkit-touch-callout: none; /* iOS Safari */
+    -webkit-user-select: none; /* Safari */
+     -khtml-user-select: none; /* Konqueror HTML */
+       -moz-user-select: none; /* Old versions of Firefox */
+        -ms-user-select: none; /* Internet Explorer/Edge */
+            user-select: none; /* Non-prefixed version, currently
+                                  supported by Chrome, Edge, Opera and Firefox */
+}
+section.contact p{
+    margin: 0;
+    font-size: 18px;
+}
+section.contact .contact-card{
+    background-image: radial-gradient(circle at bottom left, rgba(60, 60, 60, 0.20), transparent),
+        radial-gradient(circle at top right, rgba(255, 255, 255, 0.12), transparent);
+    padding: 16px 24px;
+    margin: 12px 0;
+    position: relative;
+    color: #fff;
+    border-radius: 0px 10px 0px 10px;
+}
+section.contact .border-right, .border-left{
+    position: absolute;
+    border-radius: 3px;
+    width: 35%;
+    height: 40%;
+}
+section.contact .card-type1 .border-right{
+    bottom: 0;
+    right: 0;
+    border-right: 1px solid white;
+    border-bottom: 1px solid white;
+}
+section.contact .card-type1 .border-left{
+    top: 0;
+    left: 0;
+    border-top: 1px solid white;
+    border-left: 1px solid white;
+}
+section.contact .card-type1 .contact-image{
+    position: absolute;
+    top: 0;
+    right: 0;
+    margin-top: -20px;
+    margin-right: -20px;
+    width: 40px;
+    transform: rotate(12deg);   
+}
+section.contact .card-type2 .contact-image{
+    position: absolute;
+    left: 0;
+    top: 0;
+    margin-top: -20px;
+    margin-left: -20px;
+    width: 40px;
+    transform: rotate(-12deg);
+}
+section.contact .card-type2{
+    border-radius: 10px 0px 10px 0px;
+}
+section.contact .card-type2 .border-right{
+    bottom: 0;
+    left: 0;
+    border-bottom: 1px solid white;
+    border-left: 1px solid white;
+}
+section.contact .card-type2 .border-left{
+    top: 0;
+    right: 0;
+    border-top: 1px solid white;
+    border-right: 1px solid white;
+}
+section.contact .contact-card a{
+    text-decoration: none;
+    color: #dadada !important;
+    position: relative;
+    padding: 2px;
+}
+section.contact .contact-card a::before{
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 1px;
+    background-color: #dadada;
+    
+    bottom: 0;
+    left: 0;
+    transform-origin: right;
+    transform: scaleX(0);
+    transition: transform .3s ease-in-out;
+}
+section.contact .contact-card a:hover::before{
+    transform-origin: left;
+    transform: scaleX(1);
+}
+
+
+/* Footer */
+section.footer{
+    height: 36px;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+}
+section.footer p{
+    margin: 0;
+    text-align: center;
+}
+
+/* Blinker */
+section.onboard .blinker{
+    animation: blinker 1s linear infinite;
+}
+@keyframes blinker{
+    50%{
+        opacity: 0; 
+    }
+}
+
+/* Scrollbar */
+
+::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+}
+ ::-webkit-scrollbar-track {
+    background-color: rgba(0, 0, 0, 1);
+    border-radius: 10px;
+}
+::-webkit-scrollbar-thumb {
+    background-color: #dfdfdf;
+    border-radius: 10px;
+}
+
+/* Some useful items */
+.noselect {
+    -webkit-touch-callout: none; /* iOS Safari */
+      -webkit-user-select: none; /* Safari */
+       -khtml-user-select: none; /* Konqueror HTML */
+         -moz-user-select: none; /* Old versions of Firefox */
+          -ms-user-select: none; /* Internet Explorer/Edge */
+              user-select: none; /* Non-prefixed version, currently
+                                    supported by Chrome, Edge, Opera and Firefox */
+}
+
+/* Media rules */
+
+@media (max-width: 650px){
+    section.onboard .resp-button{
+        display: flex;
+    }
+    section.onboard .tab-panel .nav-links{
+        display: none;
+    }
+    section.onboard .tab-panel ul{
+        flex-direction: column;
+    }
+    section.onboard .tab-panel li{
+        margin: 6px 0;
+    }
+    section.onboard .heading{
+        bottom: 5%;
+        right: 20px;
+        width: 90%;
+    }
+    section.onboard .title{
+        width: 100%;
+    }
+    section.onboard .tab-panel .nav-links.active{
+        display: flex ;
+    }
+}
+@media (max-width: 768px){
+    section.about-me .border-line{
+        display: none;
+    }
+    section.about-me .goals-card{
+        margin-bottom: 65px;
+    }
+    section.about-me .hobbies-card{
+        margin-top: 0px;
+    }
+    section.onboard .heading{
+        bottom: 10%;
+    }
+    section.about-me{
+        padding: 15% 15% 20% 15%;
+    }
+    section.contact{
+        padding: 90px 15% 100px 15%;
+    }
+}
+@media (max-width: 992px){
+    section.skills{
+        padding: 10% 15%;
+    }
+    section.skills .skills-tab-2{
+        margin-left: 0;
+        margin-top: 60px;
+    }
+    .mobile-resp{
+        z-index: 10;
+        height: 100vh;
+        width: 100%;
+        position: absolute;
+    }
+}

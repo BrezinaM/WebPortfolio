@@ -1,0 +1,269 @@
+body {
+    width: 100%;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.8),
+                       rgba(0, 0, 0, 0.8)), url(/assets/png/spaceBg04.webp);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    font-family: 'Exo 2', sans-serif;
+    color: #dadada;
+}
+
+/* Background */
+
+canvas {
+    display: none;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+}
+hr{
+    margin: 0 .3%;
+    padding: 0;
+    color: #dadada;
+    opacity: .6;
+}
+
+/* Section certificates */
+section.certif{
+    text-align: center;
+    padding: 20px 15%;
+}
+section.certif .header{
+    font-size: 3em;
+    font-weight: 200;
+    margin-bottom: 80px;
+    height: 80px;
+}
+
+section.certif .google-certif{
+    margin: 80px 0;
+    position: relative;
+    color: #fff;
+    background-image: radial-gradient(circle at top right, rgba(60, 60, 60, 0.20), transparent),
+        radial-gradient(circle at bottom left, rgba(255, 255, 255, 0.12), transparent);
+    border-radius: 0px 20px 0px 20px;
+    padding: 30px;
+}
+section.certif .border-right, .border-left{
+    position: absolute;
+    border-radius: 3px;
+    width: 40%;
+    height: 50%;
+    --bs-gutter-y: 0;
+    z-index: 1;
+}
+section.certif .google-certif .border-right{
+    bottom: 0;
+    right: 0;
+    border-right: 2px solid white;
+    border-bottom: 2px solid white;
+}
+section.certif .google-certif .border-left{
+    top: 0;
+    left: 0;
+    border-top: 2px solid white;
+    border-left: 2px solid white;
+}
+section.certif .google-certif .heading{
+    position: absolute;
+    top: 0;
+    right: 0;
+    margin-top: -40px;
+    margin-right: -16px;
+    font-weight: 200;
+    font-size: 42px;
+    width: 250px;
+    transform: rotate(3deg);
+}
+section.certif .heading span{
+    border-bottom: 2px solid #dadada;
+}
+
+section.certif .ccna-certif{
+    position: relative;
+    color: #fff;
+    background-image: radial-gradient(circle at bottom left, rgba(60, 60, 60, 0.20), transparent),
+        radial-gradient(circle at top right, rgba(255, 255, 255, 0.12), transparent);
+    border-radius: 20px 0px 20px 0;
+    padding: 30px;
+    margin: 0;
+}
+section.certif .ccna-certif .border-right{
+    bottom: 0;
+    left: 0;
+    border-left: 2px solid white;
+    border-bottom: 2px solid white;
+}
+section.certif .ccna-certif .border-left{
+    top: 0;
+    right: 0;
+    border-top: 2px solid white;
+    border-right: 2px solid white;
+}
+section.certif .ccna-certif .heading{
+    position: absolute;
+    top: 0;
+    left: 0;
+    margin-top: -40px;
+    margin-left: -16px;
+    font-weight: 200;
+    font-size: 42px;
+    width: 250px;
+    transform: rotate(-3deg);
+}
+
+section.certif .certif-img{
+    width: 280px;
+    z-index: 10;
+}
+section.certif .col-sm{
+    z-index: 10;
+}
+section.certif .certif-img:hover{
+    opacity: 0.8;
+}
+
+    /* Modal Images */
+
+section.certif .modal{
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 100; /* Sit on top */
+    padding-top: 100px; /* Location of the box */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100vh; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.9); /* Black w/ opacity */
+    margin: 0;
+}
+section.certif .modal-content{
+    margin: auto;
+    display: block;
+    width: 80%;
+    max-width: 900px;
+}
+section.certif .modal-content{
+    animation-name: zoom;
+    animation-duration: 0.6s;
+}
+@keyframes zoom {
+    from {transform:scale(0)}
+    to {transform:scale(1)}
+}
+section.certif .close {
+    position: absolute;
+    top: 15px;
+    right: 35px;
+    color: #f1f1f1;
+    font-size: 40px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+section.certif .close:hover, .close:focus {
+  color: #bbb;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+    /* End of Modal Images */
+
+section.certif .back{
+    margin: 40px 0 80px 0;
+}
+section.certif .back a{
+    text-decoration: none;
+    color: #dadada !important;
+    position: relative;
+    padding: 2px;
+    font-size: 24px;
+}
+section.certif .back a::before{
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 1px;
+    background-color: #dadada;
+    
+    bottom: 0;
+    left: 0;
+    transform-origin: right;
+    transform: scaleX(0);
+    transition: transform .3s ease-in-out;
+}
+section.certif .back a:hover::before{
+    transform-origin: left;
+    transform: scaleX(1);
+}
+
+/* Footer */
+section.footer{
+    height: 36px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* background-color: #000; */
+}
+section.footer p{
+    margin: 0;
+}
+
+/* Blinker */
+
+section.certif .blinker{
+    animation: blinker 1s linear infinite;
+}
+@keyframes blinker{
+    50%{
+        opacity: 0; 
+    }
+}
+
+/* Scrollbar */
+
+::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+}
+ ::-webkit-scrollbar-track {
+    background-color: rgba(0, 0, 0, 1);
+    border-radius: 10px;
+}
+::-webkit-scrollbar-thumb {
+    background-color: #dfdfdf;
+    border-radius: 10px;
+}
+
+/* Some useful items */
+.noselect {
+    -webkit-touch-callout: none; /* iOS Safari */
+      -webkit-user-select: none; /* Safari */
+       -khtml-user-select: none; /* Konqueror HTML */
+         -moz-user-select: none; /* Old versions of Firefox */
+          -ms-user-select: none; /* Internet Explorer/Edge */
+              user-select: none; /* Non-prefixed version, currently
+                                    supported by Chrome, Edge, Opera and Firefox */
+}
+
+/* Media rules */
+@media (max-width: 1100px){
+    section.certif{
+        padding: 20px 8%;
+    }
+}
+@media (max-width: 700px){
+    section.certif .header{
+        font-size: 2.2em;
+    }
+    section.certif .modal-content {
+        width: 100%;
+    }
+}
+@media (max-width: 600px){
+    section.certif .certif-img{
+        width: 220px;
+    }
+}
